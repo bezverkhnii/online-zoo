@@ -151,7 +151,7 @@
   }
   /*-----------------------------------------------*/
   .main-image {
-    background: url("./assets/images/panda.png") no-repeat;
+    background: url("../../panda.png") no-repeat;
     background-position-y: -156px;
     height: 390px;
     background-position: center;
