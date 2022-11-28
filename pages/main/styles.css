@@ -166,7 +166,7 @@ html {
     max-height: 468px;
     height: 100%;
     max-width: 960px;
-    background-image: url(/assets/images/panda.png);
+    background-image: url(./assets/images/panda.png);
     background-repeat: no-repeat;
     background-size: contain;
     justify-content: center;
