@@ -302,13 +302,14 @@ html {
   
   #wrapper{
     width:100%;
-    max-width: 964px;
+    max-width: 950px;
     position: relative;
     margin-top:20px;
     margin-bottom: 100px;
   }
   
   #carousel{
+    height:800px;
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -331,38 +332,38 @@ html {
   }
   
   #prev{
-    top:50%;
-    left:0;
+    top:calc(50% - 25px);
+    left:36%;
     transform: translate(50%, -50%);
     display: none;
   }
   
   #next {
-    top: 50%;
-    right: 0;
+    top: calc(50% - 25px);
+    right: 36%;
     transform: translate(-50%, -50%);
   }
   
   .gallery {
     display: grid;
-    grid-gap: 16px;
+    grid-template-rows: repeat(2, 360px);
+    grid-gap: 50px;
     grid-auto-flow: column;
     margin: auto;
-    box-sizing: border-box;
   }
   
   
   .gallery-item {
-    width: 200px;
-    height: 200px;
+    width: 270px;
+    height: 340px;
     border: 2px solid orange;
-    border-radius: .5rem;
+    border-radius: .2rem;
     overflow: hidden;
   }
   
   
   .gallery-item:hover .gallery-item__image {
-    transform: scale(132%);
+    transform: scale(150%);
     filter: brightness(40%);
     cursor: pointer;
   }
@@ -376,7 +377,7 @@ html {
   
   .gallery-item__image {
     transition: all .3s ease;
-    width: 200px;
+    width: 270px;
     position: relative;
   }
   
@@ -1124,14 +1125,22 @@ input[type=submit] {
         align-items: center;
       }
       
+      .container-gallery{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
       #wrapper{
         width:100%;
-        max-width: 900px;
+        max-width: 950px;
         position: relative;
-        margin-top: 30px;
+        margin-top:20px;
+        margin-bottom: 100px;
       }
       
       #carousel{
+        height:800px;
         overflow: auto;
         scroll-behavior: smooth;
         scrollbar-width: none;
@@ -1154,38 +1163,38 @@ input[type=submit] {
       }
       
       #prev{
-        top:50%;
-        left:0;
+        top:calc(50% - 25px);
+        left:36%;
         transform: translate(50%, -50%);
         display: none;
       }
       
       #next {
-        top: 50%;
-        right: 0;
+        top: calc(50% - 25px);
+        right: 36%;
         transform: translate(-50%, -50%);
       }
       
       .gallery {
         display: grid;
-        grid-gap: 16px;
+        grid-template-rows: repeat(2, 360px);
+        grid-gap: 50px;
         grid-auto-flow: column;
         margin: auto;
-        box-sizing: border-box;
       }
       
       
       .gallery-item {
-        width: 180px;
-        height: 180px;
+        width: 270px;
+        height: 340px;
         border: 2px solid orange;
-        border-radius: .5rem;
+        border-radius: .2rem;
         overflow: hidden;
       }
       
       
       .gallery-item:hover .gallery-item__image {
-        transform: scale(132%);
+        transform: scale(150%);
         filter: brightness(40%);
         cursor: pointer;
       }
@@ -1199,7 +1208,7 @@ input[type=submit] {
       
       .gallery-item__image {
         transition: all .3s ease;
-        width: 180px;
+        width: 270px;
         position: relative;
       }
       
@@ -1758,70 +1767,92 @@ input[type=submit] {
         width: auto;
     }
 
-    /*gallery of animals*/
-
-    .container-gallery{
-        display:none;
-    }
-
-    .container-gallery-six{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .gallery-six{
-        display: grid;
-        grid-template-columns: repeat(2, 270px);
-        gap:35px;
-    }
-
-
-    .gallery-item-six{
-        border: 1px solid orange;
-        border-radius: .2rem;
-        overflow: hidden;
-    }
-
-    .gallery-item-six:nth-child(3){
-        margin-top: 30px;
-    }
-
-    .gallery-item-six:nth-child(4){
-        margin-top: 30px;
-    }
-
-    .gallery-item-six:nth-child(5){
-        display: none;
-    }
-    .gallery-item-six:nth-child(6){
-        display: none;
-    }
-
-    .gallery-item-six:hover .gallery-item__image-six {
-        transform: scale(132%);
-        filter: brightness(40%);
-        cursor: pointer;
-    }
-
-    .gallery-item-six:hover .gallery-item__footer-six {
-        transform: translateY(-100%);
-        color: white;
-        justify-content: right;
-        text-align: right;
-    }
-
-    .gallery-item__image-six {
-        transition: all .3s ease;
-        width: 270px;
-        position: relative;
-    }
-
-    .gallery-item__footer-six {
-        display: flex;
-        justify-content: space-between;
-        padding: 5px 20px;
-    }
+.container-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #wrapper{
+    width:100%;
+    max-width: 630px;
+    position: relative;
+    margin-top:20px;
+    margin-bottom: 20px;
+  }
+  
+  #carousel{
+    height:800px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar{
+    height:0;
+  }
+  
+  #prev,
+  #next{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev{
+    top:calc(50% - 50px);
+    left:40%;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: calc(50% - 50px);
+    right: 40%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-rows: repeat(2, 360px);
+    grid-gap: 50px;
+    grid-auto-flow: column;
+    margin: auto;
+  }
+  
+  
+  .gallery-item {
+    width: 270px;
+    height: 340px;
+    border: 2px solid orange;
+    border-radius: .2rem;
+    overflow: hidden;
+  }
+  
+  
+  .gallery-item:hover .gallery-item__image {
+    transform: scale(150%);
+    filter: brightness(40%);
+    cursor: pointer;
+  }
+  
+  .gallery-item:hover .gallery-item__footer {
+    transform: translateY(-100%);
+    color: white;
+    justify-content: right;
+    text-align: right;
+  }
+  
+  .gallery-item__image {
+    transition: all .3s ease;
+    width: 270px;
+    position: relative;
+  }
 
 
 
@@ -1883,8 +1914,6 @@ input[type=submit] {
     .arrow-button-one .right {
         display: flex;
         position: absolute;
-        top:18;
-        left:15;
         width: 20px;
     }
 
