@@ -1,0 +1,1364 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/*-----------------------------------------*/
+:root{
+    /*font*/
+    --body-font: 'Roboto', sans-serif;
+    /*typography*/
+    --h1-size: 114px;
+    --h2-size: 48px;
+    --h3-size: 36px;
+    --subtitle-size:24px;
+    --body-btn-size:16px;
+    --body-size:16px;
+    --small-p-size:15px;
+
+    /*font-weight*/
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium:500;
+    --font-bold:700;
+    /*line height*/
+    --h1-line-height:80%;
+    --h2-line-height:120%;
+    --h3-line-height:130%;
+    --subtitle-line-height:120%;
+    --body-btn-line-height:140%;
+    --body-line-height:140%;
+    --small-p-line-height:120%;
+}
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    font-style: normal;
+    color: #ffffff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  .burger-background{
+    display:none;
+  }
+
+  .header {
+    width: 100%;
+    background: #000000;
+    backdrop-filter: blur(2px);
+    position: relative;
+    z-index: 3;
+  }
+  .header .header__container {
+    padding: 14px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .header__container .header__left-side {
+    display: flex;
+    gap: 63px;
+    align-items: center;
+    width: 617px;
+  }
+  
+  .container {
+    max-width: 1160px;
+    display: flex;
+    margin-right:auto;
+    margin-left:auto;
+  }
+  
+  .logo-border{
+    width: 82px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+  }
+
+
+  
+  .title {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 130%;
+    text-align: center;
+  }
+  
+  .title:hover{
+    color:linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  }
+
+  .list {
+    display: flex;
+    gap: 58px;
+    list-style-type: none;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .link:hover, .link:active {
+    background:linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .link:hover .title, .link:active .title {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .orange {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  }
+  
+  .subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333B41;
+  }
+  
+  .h3 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+  }
+  
+  .or3 {
+    color: #FE9013;
+  }
+  
+
+  
+
+  .active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /*-----------------------------------------------*/
+  .main-image {
+    background: url("../../assets/images/panda.png") no-repeat;
+    background-position-y: -156px;
+    height: 390px;
+    background-position: center;
+  }
+  
+  .btn2 {
+    width: 298px;
+    height: 54px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .btn2:hover {
+    background: #E47209;
+  }
+/*-------------------------------------------------*/
+  .pickfeed {
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    padding: 40px 0 180px;
+  }
+  .pickfeed__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pickfeed__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 30px;
+  }
+  .pickfeed__main-block {
+    margin-top: 60px;
+    padding: 40px 92px 62px;
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+  }
+  .pickfeed__main-block .h2 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    padding-left: 250px;
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    color: #333B41;
+  }
+  .top-block {
+    margin-top: 60px;
+    gap: 89px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 87px;
+  }
+  .animal{
+    width: 284px;
+    height: 246px;
+  }
+  .number-block {
+    padding-top: 105px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: center;
+  }
+  .amount-of-days {
+    width: 82px;
+    height: 58px;
+    position: relative;
+  }
+  .times {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -80px;
+    top: calc(50% - 7px);
+  }
+  .amount-titles {
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .number-block .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+  }
+  .pickfeed__main-block form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .pickfeed__main-block form .progress-bar {
+    width: 100%;
+    height: 27px;
+    background: #404950;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .pickfeed__main-block form .progress-bar .progress-bar__main-block {
+    width: calc(100% - 56px);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .pickfeed__main-block form .progress-bar .progress-bar__main-block::before {
+    content: "";
+    background: #72828E;
+    width: 100%;
+    height: 2px;
+    border: none;
+    outline: none;
+    position: absolute;
+  }
+  .pickfeed__main-block form .progress-bar span {
+    width: 10px;
+    height: 10px;
+    background: #FFEE2E;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+  }
+  .pickfeed__main-block form .progress-bar span .progress-bar__label {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #333B41;
+  }
+  .pickfeed__main-block form .progress-bar span::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+  }
+
+  
+  .active-dot{                     /*circle ico*/
+    position: absolute;
+    top:-150%;
+    right:-15px;
+  }
+
+  .or{
+    
+  }
+
+  .pickfeed__main-block form .progress-bar span:hover {
+    background: #FE9013;
+    transition: 0.2s;
+  }
+  .pickfeed__main-block form .progress-bar::before {
+    content: "Amount";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    position: absolute;
+    bottom: 39px;
+    left: 0;
+  }
+  .pickfeed__main-block form .progress-text {
+    padding: 0 22px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 58px;
+    margin-bottom: 38px;
+  }
+  .pickfeed__main-block form .progress-text .progress-text__block {
+    width: 29px;
+    height: 36px;
+    position: relative;
+  }
+.pickfeed__main-block form .progress-text .progress-text__block .h5 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #333B41;
+  }
+
+  .pickfeed__main-block form .progress-text .or3 .h5 {
+    color: #FE9013;
+  }
+  .pickfeed .pickfeed__container .pickfeed__main-block form .progress-text .or3::after {
+    filter: invert(53%) sepia(98%) saturate(1094%) hue-rotate(351deg) brightness(105%) contrast(99%);
+  }
+  .pickfeed__main-block form .anotheramount__label {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 13px;
+  }
+
+  .pickfeed__main-block form .anotheramount__label .another-amount-input {
+    width: 268px;
+    height: 54px;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    background: transparent;
+    padding-left: 9px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #929699;
+  }
+  .pickfeed__main-block form .radio-buttons {
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 19px;
+  }
+  .pickfeed__main-block form .radio-buttons .radio-button {
+    width: 84px;
+    height: 21px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .pickfeed__main-block form .radio-buttons .radio-button .radio-label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+  }
+
+  .pickfeed .pickfeed__container .pickfeed__main-block form .btn2 {
+    border-radius: 30px;
+    margin: 0 auto;
+    border: none;
+    margin-bottom: 20px;
+  }
+  .pickfeed .pickfeed__container .pickfeed__main-block form .main-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+    text-align: center;
+  }
+  
+  .footer {
+    background: #000000;
+  }
+  .footer .footer__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 30px;
+  }
+  .footer .footer__container .footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-right: 69px;
+  }
+
+  .footer .footer__container .footer__left .logo {
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 24px;
+  }
+  .footer .footer__container .footer__left .logo-border .title {
+    position: relative;
+    top: -1.55px;
+
+  }
+  .footer .footer__container .footer__left .logo-border .logo__img {
+    position: absolute;
+  }
+
+  .footer .footer__container .footer__left .social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .social__card {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    position: relative;
+  }
+  .footer .footer__container .footer__left .social .social__card:hover .social__title {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  
+
+
+  .footer .footer__container .footer__left .social .social__card:active .social__title {
+    background: #4B9200;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .footer .footer__container .footer__left .social .social__card:active .social__icon {
+    background: #4B9200;
+  }
+  .footer .footer__container .footer__left .social .social__card .social__title {
+    font-weight: 300;
+    line-height: 120%;
+  }
+  .footer .footer__container .footer__left .social .social__card .social__icon {
+    background: rgba(196, 196, 196, 0.5);
+    width: 26px;
+    height: 26px;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footer__container .footer__center {
+    display: flex;
+    align-items: flex-end;
+  }
+  .footer .footer__container .footer__center .link {
+    font-weight: 400;
+  }
+  .footer .footer__container .footer__right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+  }
+  .footer .footer__container .footer__right .footer__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer .footer__container .footer__right .footer__copyright {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+    opacity: 0.5;
+    position: absolute;
+    right:10%;
+    top:85%;
+  }
+  .footer .footer__container .footer__right .subtitle {
+    color: #FFFFFF;
+    margin-bottom: 14px;
+  }
+  .footer .footer__container .footer__right .input__block {
+    display: flex;
+    gap: 10px;
+  }
+  .input__block input {
+    width: 230px;
+    height: 44px;
+    border-radius: 3px;
+    padding: 10px;
+    border: 0.7px solid #F9804B;
+    background: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    outline: none;
+  }
+
+  .input__block input:active{
+    width: 230px;
+    height: 44px;
+    border-radius: 3px;
+    padding: 10px;
+    border: 0.7px solid #4B9200;
+    background: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    outline: none;
+  }
+
+.input__block .btn-activ {
+    width: 129px;
+    height: 42px;
+    border: 1px solid #333B41;
+    border-radius: 5px;
+    color: #000000;
+  }
+  
+  .input__block .btn-activ:active{
+    border: 0.7px solid #4B9200;
+    color:#4B9200;
+  }
+
+  /*media queries*/
+  @media(max-width:1000px){
+    .header {
+      width: 100%;
+      background: #000000;
+      position: relative;
+      z-index: 3;
+    }
+
+    .title{
+      font-size: 14px;
+    }
+
+    .logo-border{
+      width:70px;
+      height:50px;
+      margin-right: 10px;
+    }
+
+    .header .header__container {
+      padding: 14px 0;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header .header__container .header__left-side {
+      gap: 1px;
+      align-items: center;
+      width: 1000px;
+      justify-content: center;
+    }
+    /*main*/
+    .main-image{
+      max-width: 1000px;
+      background-size:cover;
+    }
+    /*section*/
+    .container .pickfeed__container{
+
+    }
+
+    .h3{
+      margin-left: 2%;
+      width:700px;
+      font-size: 30px;
+    }
+
+    .pickfeed__subtitle{
+      width:900px;
+      margin-left: 2%;
+      font-size: 14px;
+    }
+
+    .or3{
+      font-size: 27px;
+    }
+
+    .pickfeed{
+      display: flex;
+      height:1250px;
+    }
+
+    .pickfeed__main-block{ 
+      margin-top: 15px;
+      padding:30px 80px 60px;
+      width:930px;
+    }
+
+    .h2.or3{
+      font-size: 40px;
+    }
+
+    .subtitle{
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .top-block{
+      margin-top: 50px;
+      gap:70px;
+      margin-bottom: 75px;
+    }
+
+    .times{
+      width: 15px;
+      height: auto;
+    }
+    .animal{
+      width:250px;
+      height:auto;
+    }
+
+    /*footer*/
+    .footer__container{
+      width:1000px;
+    }
+
+    .footer__left{
+      max-width: 200px;
+      padding:20px;
+    }
+
+    .footer__center{
+      width:300px;
+    }
+
+    .footer__center .nav .list{
+      gap:25px;
+    }
+
+    .footer__center .nav .list .list__item{
+      font-size: 10px;
+    }
+
+    .footer__right{
+      display: flex ;
+      position: relative;
+      margin-right:40px;
+    }
+
+    .subscribe-block .subtitle{
+      display: inline;
+      top:1;
+      left:1px;
+    }
+    .footer .footer__container .footer__right .input__block {
+      position: absolute;
+      top:10%;
+    }
+    .footer .footer__container .footer__right .input__block input{
+      width:190px;
+      height: 35px;
+    }
+
+    .input__block .btn-activ{
+      width: 100px;
+      height: 39px;
+    }
+
+    .footer .footer__container .footer__right .footer__copyright{
+        width:300px;
+        font-size: 15px;
+        position: absolute;
+        left:1%;
+        top:87%;
+    }
+    
+  }
+
+  @media(max-width:640px){
+
+    .logo-nav{
+      color: rgb(255, 137, 27);
+      text-align: center;
+      border: 1px solid rgb(255, 143, 38);
+      border-radius: .3rem;
+      padding: 0 6px 0 6px;
+      font-size: 19px;
+      width:100px;
+      margin-bottom: 20px;
+}
+
+.logo-nav a div{
+  color: rgb(255, 137, 27);
+}
+
+
+    header{
+      display: none;
+    }
+
+  .burger-background{
+      display: flex;
+      background-color: #000000;
+      height:40px;
+  }
+  
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    left: 5px;
+    top:7px;
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #000000;
+    
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover
+  {
+    color: rgb(255, 124, 37);
+  }
+  
+  
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+  
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+  }
+  
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #ffffff;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  
+  
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu
+  {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    
+    background: rgb(255, 255, 255);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu li
+  { 
+    color:#000000;
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+
+  .section.main-image{
+    max-width: 640px;
+  }
+
+  .container.pickfeed__container{
+    align-items: center;
+  }
+
+  .section.pickfeed{
+    max-width:640px;
+    justify-content: center;
+  }
+
+  .h3{
+    width:640px;
+    font-size: 25px;
+  }
+  
+  .pickfeed__subtitle{
+    width:620px;
+  }
+
+  .h3.or3{
+    font-size: 40px;
+  }
+
+  .pickfeed__main-block{
+    width: 630px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .h2.or3{
+    width:640px;
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+  }
+  
+  .subtitle{
+    margin-top: 17px;
+    width:500px;
+    margin: 0;
+    padding:0;
+  }
+
+  .number-block .text{
+    font-size: 13px;
+  }
+
+  .pickfeed__main-block form .progress-bar{
+    width: 630px;
+    margin-left: -80px;
+  }
+
+  .or3 svg{
+    left:-33%;
+  }
+
+  .pickfeed__main-block form .progress-text .progress-text__block .h5{
+    font-size: 18px;
+    margin-left: -125px;
+    padding-left:50px;
+    padding-right:50px;
+  }
+
+  .pickfeed__main-block form .anotheramount__label .another-amount-input{
+    width:200px;
+    height:50px;
+  }
+
+  .pickfeed .pickfeed__container .pickfeed__main-block form .btn2{
+    width:310px;
+  }
+
+  .footer .footer__container{
+    width:640px;
+    position: relative;
+    height: 300px;
+  }
+
+  .logo-border{
+    position: absolute;
+    top:4%;
+    left:2%;
+  }
+
+  .btn2.orange.cursor-pointer.noselect{
+    position: absolute;
+    top:90px;
+    left:2%;
+  }
+  
+  .subscribe-block{
+    display: none;
+  }
+
+  .social h4{
+    display: none;
+  }
+
+  .social{
+    position: absolute;
+    right:10%;
+    top:4%;
+  }
+
+  .social__card{
+    padding-bottom: 7px;
+  }
+
+  .nav{
+    position: absolute;
+    left:2%;
+    bottom:2%;
+  }
+
+  .list .list__item{
+    padding-left: 7px;
+  }
+  
+  .footer .footer__container .footer__center .link{
+    font-weight: 100;
+  }
+ 
+  .footer__copyright{
+    width: 200;
+    font-size: 17px;
+    font-weight: 100;
+    position: absolute;
+    bottom: 2%;
+    right:6%;
+  }
+
+  .footer__copyright p{
+    color:#6d6e6e;
+  }
+
+  }
+
+@media(max-width:320px){
+  .burger-background{
+    display: flex;
+    background-color: #000000;
+    height:30px;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  left: 5px;
+  top:7px;
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #000000;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: rgb(255, 124, 37);
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 20px;
+  height: 16px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 3px;
+  position: relative;
+  
+  background: #ffffff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 200px;
+  margin: -120px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: rgb(255, 255, 255);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  height:370px;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  border-radius: .2rem;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+  html{
+    max-width: 320px;
+  }
+
+  .section.main-image{
+    max-width: 320px;
+    height: 150px;
+  }
+
+  .container.pickfeed__container{
+    align-items: center;
+  }
+
+  .section.pickfeed{
+    max-width:320px;
+    justify-content: center;
+    height:1350px;
+  }
+
+  .h3{
+    width:320px;
+    font-size: 23px;
+  }
+  
+  .pickfeed__subtitle{
+    width:320px;
+  }
+
+  .h3.or3{
+    font-size: 26px;
+  }
+
+  .pickfeed__main-block{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .h2.or3{
+    width:320px;
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    margin-left: 60px;
+  }
+  
+  .subtitle{
+    margin-top: 10px;
+    width:320px;
+    margin-left: 20px;
+    padding:0;
+    font-size: 14px;
+  }
+
+  .top-block {
+    width:320px;
+  }
+  .animal{
+    width: 200px;
+    height: 160px;
+  }
+  .number-block {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: center;
+  }
+  .amount-of-days .text{
+    width: 100px;
+  }
+  .times {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: -50px;
+    top: calc(50% - 7px);
+  }
+  .amount-titles {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 40%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .number-block .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #333B41;
+  }
+
+  .pickfeed__main-block form .progress-bar{
+    width: 85.5%;
+  }
+
+  .or3 svg{
+    left:123%;
+  }
+
+  .pickfeed__main-block form .progress-text .progress-text__block .h5{
+    font-size: 18px;
+    margin-left: -125px;
+    padding-left:50px;
+    padding-right:50px;
+  }
+
+  .pickfeed__main-block form .anotheramount__label .another-amount-input{
+    width:200px;
+    height:50px;
+  }
+
+  .pickfeed .pickfeed__container .pickfeed__main-block form .btn2{
+    width:310px;
+  }
+
+  .footer .footer__container{
+    width:640px;
+    position: relative;
+    height: 300px;
+  }
+
+  .logo-border{
+    position: absolute;
+    top:4%;
+    left:2%;
+  }
+
+  .btn2.orange.cursor-pointer.noselect{
+    position: absolute;
+    top:90px;
+    left:2%;
+  }
+  
+  .subscribe-block{
+    display: none;
+  }
+
+  .social h4{
+    display: none;
+  }
+
+  .social{
+    position: absolute;
+    right:10%;
+    top:4%;
+  }
+
+  .social__card{
+    padding-bottom: 7px;
+  }
+
+  .nav{
+    position: absolute;
+    left:2%;
+    bottom:2%;
+  }
+
+  .list .list__item{
+    padding-left: 7px;
+  }
+  
+  .footer .footer__container .footer__center .link{
+    font-weight: 100;
+  }
+ 
+  .footer__copyright{
+    width: 200;
+    font-size: 17px;
+    font-weight: 100;
+    position: absolute;
+    bottom: 2%;
+    right:6%;
+  }
+
+  .footer__copyright p{
+    color:#6d6e6e;
+  }
+
+}
+  
